@@ -3,6 +3,7 @@ package com.example.listviewcode;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -21,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
         season.add("Autumn");
         season.add("Spring");
 
+        ArrayAdapter<String> ar_adapter = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,season);
+        MyList.setAdapter(ar_adapter);
 
     }
 }
