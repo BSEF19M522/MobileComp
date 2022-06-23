@@ -11,6 +11,8 @@ import android.widget.ListView;
 import android.view.LayoutInflater;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
     ListView listv;
     @Override
@@ -18,33 +20,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
       listv=findViewById(R.id.listv);
-      String [] Names={"linkedIn", "GitHub", "BitBucket","Youtube"};
-      Integer[] images={R.drawable.linkedin, R.drawable.githublogo,R.drawable.bitbucket,R.drawable.youtube};
-       CustomAdapter customadapt=new CustomAdapter(getApplicationContext(),Names,images);
-       listv.setAdapter(customadapt);
+        ArrayList<Appsclass> arr= new ArrayList<>();
+        arr.add(new Appsclass(R.drawable.linkedin,"linkedIn","LinkedIn is a social network that focuses on professional networking and career development"));
+        arr.add(new Appsclass(R.drawable.githublogo,"GitHub","It . is a provider of Internet hosting for software development and version control using Git"));
+        arr.add(new Appsclass(R.drawable.bitbucket,"BitBucket","Bitbucket is a Git-based source code repository hosting service owned by Atlassian."));
+        arr.add(new Appsclass(R.drawable.youtube, "Youtube","YouTube is a video sharing service where users can create their own profile, upload videos, watch, like and comment on other videos."));
 
-    }
-     public class CustomAdapter extends ArrayAdapter<String> {
-         private final Activity context;
-         private final String[] Names;
-         private final Integer[] images;
-
-         public CustomAdapter(Context context, String[] Names, Integer[] images) {
-             super(context, R.layout.customview, Names);
-             this.context = (Activity) context;
-             this.Names = Names;
-             this.images = images;
-
-         }
-
-         public View getView(int i, View view, ViewGroup vg) {
-             LayoutInflater inflater=context.getLayoutInflater();
-             View v = inflater.inflate(R.layout.customview, null, true);
-             ImageView img = findViewById(R.id.img);
-             TextView text = findViewById(R.id.textView);
-             img.setImageResource(images[i]);
-             text.setText(Names[i]);
-             return v;
-         }
      }
 }
