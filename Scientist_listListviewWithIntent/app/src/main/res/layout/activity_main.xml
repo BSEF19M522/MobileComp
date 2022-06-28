@@ -18,11 +18,12 @@
         android:textStyle="bold"
 
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.933"
+        app:layout_constraintHorizontal_bias="0.066"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
+        android:id="@+id/MyList"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="1dp"
