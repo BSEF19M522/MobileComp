@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity{
         arr.add(new appsclass(R.drawable.two,"TWO"));
         arr.add(new appsclass(R.drawable.three,"THREE"));
         arr.add(new appsclass(R.drawable.four,"FOUR"));
-        arr.add(new appsclass(R.drawable.five,"FIVE"));
+        arr.add(new appsclass(R.drawable.fivee,"FIVE"));
         arr.add(new appsclass(R.drawable.six,"SIX"));
         arr.add(new appsclass(R.drawable.seven,"SEVEN"));
         arr.add(new appsclass(R.drawable.eight,"EIGHT"));
