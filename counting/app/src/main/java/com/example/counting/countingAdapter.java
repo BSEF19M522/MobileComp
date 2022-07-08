@@ -8,15 +8,13 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 
 public class countingAdapter extends ArrayAdapter<appsclass> {
     private Context lContext;
     private  int lResources;
-    public AppclAdapter(@NonNull Context context, int resource, @NonNull ArrayList<Appsclass> objects) {
+    public countingAdapter(Context context, int resource, ArrayList<appsclass> objects) {
         super(context, resource, objects);
 
         this.lContext = context;
@@ -24,9 +22,9 @@ public class countingAdapter extends ArrayAdapter<appsclass> {
 
 
     }
-    @Nullable
+
     @Override
-    public View getView(int position, @Nullable View convertView, @Nullable ViewGroup parent ){
+    public View getView(int position,  View convertView, ViewGroup parent ){
         LayoutInflater layoutinf=LayoutInflater.from(lContext);
         convertView=layoutinf.inflate(lResources,parent,false);
         ImageView image= convertView.findViewById(R.id.imageView);
