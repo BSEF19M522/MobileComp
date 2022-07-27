@@ -20,8 +20,7 @@ public class Activity2 extends AppCompatActivity {
         im.setImageResource(R.drawable.c);
         t1=findViewById(R.id.textView);
         t1.setText("HELLO");
-        hiiiiiii
-
+        
 
     }
 }
