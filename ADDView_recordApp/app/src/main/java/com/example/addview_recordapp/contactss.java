@@ -3,10 +3,10 @@ package com.example.addview_recordapp;
 import androidx.annotation.NonNull;
 
 public class contactss {
-    private String Name;
-    private int PhoneNumber;
+    private static String Name;
+    private static  String PhoneNumber;
 
-    public String getName() {
+    public static String getName() {
         return Name;
     }
 
@@ -14,25 +14,25 @@ public class contactss {
         Name = name;
     }
 
-    public int getPhoneNumber() {
+    public static String getPhoneNumber() {
         return PhoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         PhoneNumber = phoneNumber;
     }
 
-    public contactss(String name, int phoneNumber) {
+    public contactss(String name, String phoneNumber) {
         Name = name;
         PhoneNumber = phoneNumber;
     }
 
-    @NonNull
+
     @Override
     public String toString() {
 
-            return "contactss{" + "Name='" + Name + '\'' + ", PhoneNumber=" + PhoneNumber + '}';
+            return "contactss{" + "Name='" + Name + '\'' + ", phoneNumber=" + PhoneNumber + '}';
         }
-        
-    }
+
+
 }

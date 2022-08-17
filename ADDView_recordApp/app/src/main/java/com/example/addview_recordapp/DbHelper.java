@@ -32,6 +32,39 @@ public class DbHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
+    public void  addcontact(contactss conT){
+        SQLiteDatabase db = this.getWritableDatabase();
+        //Hash map, as we did in bundles
+        ContentValues cv = new ContentValues();
+
+        cv.put(Contact_NAME, contactss.getName());
+        cv.put(Contact_ID, contactss.getPhoneNumber());
+
+        db.insert(Contact_TABLE, null, cv);
+        db.close();
+
+    }
+    public ArrayList<contactss> getAllContacts() {
+
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursorCourses = db.rawQuery("SELECT * FROM " + Contact_TABLE, null);
+
+        ArrayList<contactss> contactArrayList = new ArrayList<>();
+
+        // moving our cursor to first position.
+        if (cursorCourses.moveToFirst()) {
+            do {
+
+                contactArrayList.add(new contactss(cursorCourses.getString(1), cursorCourses.getString(2)));
+            } while (cursorCourses.moveToNext());
+
+        }
+
+        cursorCourses.close();
+        return contactArrayList;
+    }
+
 
 
 }
