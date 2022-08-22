@@ -1,8 +1,14 @@
 package com.example.dbcrud;
 
+import android.widget.EditText;
+
 public class contactss {
     private static String Name;
     private static  String PhoneNumber;
+
+    public contactss() {
+    }
+
 
     public static String getName() {
         return Name;

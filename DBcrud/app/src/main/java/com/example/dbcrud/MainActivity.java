@@ -22,31 +22,32 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button ADD, VIEW,UPDATE,DELETE;
-        EditText name,phn;
+        Button ADD, VIEW, UPDATE, DELETE;
+        EditText name;
+        EditText phn;
         ListView listViewContact;
 
         ADD = findViewById(R.id.ADD);
-        UPDATE= findViewById(R.id.UPDATE);
-        DELETE= findViewById(R.id.DELETE);
+        UPDATE = findViewById(R.id.UPDATE);
+        DELETE = findViewById(R.id.DELETE);
         VIEW = findViewById(R.id.VIEW);
-        name = findViewById(R.id.name);
-        phn = findViewById(R.id.phn);
+        name = (EditText) findViewById(R.id.name);
+        phn = (EditText) findViewById(R.id.phn);
         listViewContact = findViewById(R.id.listViewContact);
 
         ADD.setOnClickListener(new View.OnClickListener() {
             contactss contact;
+
             @Override
             public void onClick(View view) {
 
                 try {
-                    contact = new contactss(name.getText().toString(),phn.getText().toString());
+                    contact = new contactss(name.getText().toString(), phn.getText().toString());
                     //Toast.makeText(MainActivity.this, studentModel.toString(), Toast.LENGTH_SHORT).show();
-                }
-                catch (Exception e){
+                } catch (Exception e) {
                     Toast.makeText(MainActivity.this, "Error", Toast.LENGTH_SHORT).show();
                 }
-                DbHelper dbHelper  = new DbHelper(MainActivity.this);
+                DbHelper dbHelper = new DbHelper(MainActivity.this);
                 dbHelper.addcontact(contact);
             }
         });
@@ -56,12 +57,38 @@ public class MainActivity extends AppCompatActivity {
                 DbHelper dbHelper = new DbHelper(MainActivity.this);
                 List<contactss> list = dbHelper.getAllContacts();
                 ArrayAdapter arrayAdapter = new ArrayAdapter<contactss>
-                        (MainActivity.this, android.R.layout.simple_list_item_1,list);
+                        (MainActivity.this, android.R.layout.simple_list_item_1, list);
                 listViewContact.setAdapter(arrayAdapter);
 
             }
         });
 
+        DELETE.setOnClickListener(new View.OnClickListener() {
+            contactss contact;
+
+            @Override
+            public void onClick(View view) {
+
+                DbHelper dbHelper = new DbHelper(MainActivity.this);
+                dbHelper.deletecontact(name.getText().toString(), phn.getText().toString());
+            }
+        });
+
+        UPDATE.setOnClickListener(new View.OnClickListener() {
+            contactss contact;
+
+            @Override
+            public void onClick(View view) {
+               contactss cc=new contactss();
+               cc.setName(name.getText().toString());
+               cc.setPhoneNumber(phn.getText().toString());
+                DbHelper dbHe= new DbHelper(MainActivity.this);
+                dbHe.Update(cc);
+
+            }
+
+
+        });
     }
 }
 

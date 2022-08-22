@@ -12,9 +12,9 @@ import java.util.ArrayList;
 
 
 public class DbHelper extends SQLiteOpenHelper {
-    public static final String Contact_ID = "ContactID";
-    public static final String Contact_NAME = "Name";
-    public static final String Contact_Phn = "PhoneNumber";
+    public static String Contact_ID = "ContactID";
+    public static  String Contact_NAME = "Name";
+    public static String Contact_Phn = "PhoneNumber";
     public static final String Contact_TABLE = "ContactTable";
 
     public DbHelper(@Nullable Context context) {
@@ -66,12 +66,34 @@ public class DbHelper extends SQLiteOpenHelper {
         cursorCourses.close();
         return contactArrayList;
     }
- public void deletecontact(String name){
+ public void deletecontact(String name,String phn){
    SQLiteDatabase db = this.getWritableDatabase();
    db.delete(Contact_TABLE, name="?", new String[]{name});
    db.close();
 
  }
+    public contactss getContact(String name)
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        Cursor cursor= db.query(Contact_TABLE,new String[]{Contact_NAME,Contact_Phn},Contact_NAME+="?",new String[]{String.valueOf(name)},null,null,null);
+        if(cursor!=null){
+            cursor.moveToFirst();}
+        contactss cc=new contactss(cursor.getString(1), cursor.getString(2));
+       db.close();
+       return  cc;
+    }
+    public int Update(contactss cc){
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues cv = new ContentValues();
+
+        cv.put(Contact_NAME, contactss.getName());
+        cv.put(Contact_Phn, contactss.getPhoneNumber());
+   return  db.update(Contact_TABLE,cv,Contact_NAME+="?" ,new String[]{String.valueOf(contactss.getName())});
+
+    }
+
 
 
 }
