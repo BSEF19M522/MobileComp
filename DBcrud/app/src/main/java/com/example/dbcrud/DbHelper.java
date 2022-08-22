@@ -44,6 +44,8 @@ public class DbHelper extends SQLiteOpenHelper {
         db.close();
 
     }
+
+
     public ArrayList<contactss> getAllContacts() {
 
         SQLiteDatabase db = this.getReadableDatabase();
@@ -64,7 +66,12 @@ public class DbHelper extends SQLiteOpenHelper {
         cursorCourses.close();
         return contactArrayList;
     }
+ public void deletecontact(String name){
+   SQLiteDatabase db = this.getWritableDatabase();
+   db.delete(Contact_TABLE, name="?", new String[]{name});
+   db.close();
 
+ }
 
 
 }

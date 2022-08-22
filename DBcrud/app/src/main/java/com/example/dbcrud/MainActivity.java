@@ -22,11 +22,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button ADD, VIEW;
+        Button ADD, VIEW,UPDATE,DELETE;
         EditText name,phn;
         ListView listViewContact;
 
         ADD = findViewById(R.id.ADD);
+        UPDATE= findViewById(R.id.UPDATE);
+        DELETE= findViewById(R.id.DELETE);
         VIEW = findViewById(R.id.VIEW);
         name = findViewById(R.id.name);
         phn = findViewById(R.id.phn);
