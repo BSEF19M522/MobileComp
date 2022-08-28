@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
        <group android:checkableBehavior="single">
 
                <item
                    android:id="@+id/nav_cam"
                    android:icon="@drawable/ic_camera"
-                   android:title="Book" />
+                   android:title="Camera" />
 
                <item
                    android:id="@+id/nav_img"
                    android:icon="@drawable/ic_image"
-                   android:title="Return" />
+                   android:title="Images" />
 
                <item
                    android:id="@+id/nav_imgserch"
                    android:icon="@drawable/ic_image_search"
-                   android:title="Laptop" />
+                   android:title="ImageSearch" />
 
                <item
                    android:id="@+id/nav_delete"
                    android:icon="@drawable/ic_delete"
-                   android:title="Voice" />
+                   android:title="Delete" />
 
            </group>
 
@@ -32,17 +33,11 @@
                 <item
                     android:id="@+id/nav_send"
                     android:icon="@drawable/ic_send"
-                    android:title="Chrome Reader" />
+                    android:title="Send" />
                 <item
                     android:id="@+id/nav_share"
                     android:icon="@drawable/ic_share"
-                    android:title="Read More" />
-            </group>
-        </menu>
-    </item>
-    <item android:title="Comments">
-        <menu>
-            <group android:checkableBehavior="single">
+                    android:title="Share" />
                 <item
                     android:id="@+id/Nav_slideshare"
                     android:icon="@drawable/ic_slideshow"
@@ -50,6 +45,7 @@
 
             </group>
         </menu>
+
 
     </item>
 </menu>
