@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#52187A"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="88dp"
+        android:layout_height="125dp"
+
+
+        android:src="@drawable/imagesq" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MY QURAN APP"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+        android:textColor="#F36464"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="bsef19m522"
+
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#FAF0F0"
+        android:textSize="24sp" />
+
+
+</LinearLayout>
