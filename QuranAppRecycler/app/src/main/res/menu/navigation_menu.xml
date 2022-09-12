@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/all_surah"
+
+                    android:title="Urdu Surah" />
+
+                <item
+                    android:id="@+id/all_parah"
+
+                    android:title="Urdu Parah" />
+                <item
+                    android:id="@+id/eng_surah"
+
+                    android:title="English Surah" />
+
+                <item
+                    android:id="@+id/eng_parah"
+
+                    android:title="English Parah" />
+
+
+
+        </group>
+
+        <item android:title="SHARING">
+        <menu>
+                <group android:checkableBehavior="single">
+                        <item
+                            android:id="@+id/nav_send"
+                            android:icon="@drawable/ic_send"
+                            android:title="Send" />
+                        <item
+                            android:id="@+id/nav_share"
+                            android:icon="@drawable/ic_share"
+                            android:title="Share" />
+
+
+                </group>
+        </menu>
+        </item>
+
+
+
+
+
+
+
+</menu>
