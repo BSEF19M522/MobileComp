@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.childrenbook">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ChildrenBook">
+        <activity
+            android:name=".onZ"
+            android:exported="false" />
+        <activity
+            android:name=".onY"
+            android:exported="false" />
+        <activity
+            android:name=".onX"
+            android:exported="false" />
+        <activity
+            android:name=".onW"
+            android:exported="false" />
+        <activity
+            android:name=".onV"
+            android:exported="false" />
+        <activity
+            android:name=".onU"
+            android:exported="false" />
+        <activity
+            android:name=".onT"
+            android:exported="false" />
+        <activity
+            android:name=".onS"
+            android:exported="false" />
+        <activity
+            android:name=".onR"
+            android:exported="false" />
+        <activity
+            android:name=".onQ"
+            android:exported="false" />
+        <activity
+            android:name=".onP"
+            android:exported="false" />
+        <activity
+            android:name=".onO"
+            android:exported="false" />
+        <activity
+            android:name=".onN"
+            android:exported="false" />
+        <activity
+            android:name=".onM"
+            android:exported="false" />
+        <activity
+            android:name=".onL"
+            android:exported="false" />
+        <activity
+            android:name=".onK"
+            android:exported="false" />
+        <activity
+            android:name=".onJ"
+            android:exported="false" />
+        <activity
+            android:name=".onI"
+            android:exported="false" />
+        <activity
+            android:name=".onH"
+            android:exported="false" />
+        <activity
+            android:name=".onG"
+            android:exported="false" />
+        <activity
+            android:name=".onF"
+            android:exported="false" />
+        <activity
+            android:name=".onE"
+            android:exported="false" />
+        <activity
+            android:name=".onD"
+            android:exported="false" />
+        <activity
+            android:name=".onC"
+            android:exported="false" />
+        <activity
+            android:name=".onB"
+            android:exported="false" />
+        <activity
+            android:name=".onA"
+            android:exported="false" />
+        <activity
+            android:name=".lessonWindow"
+            android:exported="false" />
+        <activity
+            android:name=".lessonlistwindow"
+            android:exported="false" />
+        <activity
+            android:name=".QuizWindow"
+            android:exported="false" />
+        <activity
+            android:name=".ResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".QuizlistWindow"
+            android:exported="false" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
